@@ -6,6 +6,7 @@ large files with a lot of static content, consider using
 """
 
 def file(**kwargs):
+    print(kwargs) #  {"name": "hello", "content": "Hello world\n"}
     _file(out = "{name}.txt".format(**kwargs), **kwargs)
 
 def _impl(ctx):
